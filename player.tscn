@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://cn3d87q3272o2"]
+[gd_scene load_steps=9 format=3 uid="uid://cn3d87q3272o2"]
 
+[ext_resource type="Script" path="res://Scripts/player_moving.gd" id="1_333hp"]
 [ext_resource type="Texture2D" uid="uid://dvuslgw1hwk3a" path="res://sprites/spaceship (6).png" id="1_sr7yr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pf6hh"]
@@ -38,20 +39,25 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u144k"]
-size = Vector2(120, 37)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_terir"]
+radius = 14.0
+height = 114.0
 
-[node name="Node2D" type="Node2D"]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(119, 36)
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(507, 279)
+script = ExtResource("1_333hp")
 metadata/_edit_group_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_iges3")
 animation = &"new_animation"
 autoplay = "new_animation"
-frame_progress = 0.349246
+frame_progress = 0.498031
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("RectangleShape2D_u144k")
+[node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
+zoom = Vector2(1.5, 1.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 3)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_terir")
