@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://cn3d87q3272o2"]
 
-[ext_resource type="Script" path="res://Scripts/player_moving.gd" id="1_333hp"]
+[ext_resource type="Script" path="res://Scripts/player_controls.gd" id="1_877he"]
 [ext_resource type="Texture2D" uid="uid://dvuslgw1hwk3a" path="res://sprites/spaceship (6).png" id="1_sr7yr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pf6hh"]
@@ -45,7 +45,7 @@ height = 114.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(507, 279)
-script = ExtResource("1_333hp")
+script = ExtResource("1_877he")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
