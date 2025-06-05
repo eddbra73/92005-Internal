@@ -1,7 +1,37 @@
 [gd_scene load_steps=9 format=3 uid="uid://cn3d87q3272o2"]
 
-[ext_resource type="Script" path="res://Scripts/player_controls.gd" id="1_877he"]
 [ext_resource type="Texture2D" uid="uid://dvuslgw1hwk3a" path="res://sprites/spaceship (6).png" id="1_sr7yr"]
+
+[sub_resource type="GDScript" id="GDScript_r6k45"]
+script/source = "extends CharacterBody2D
+
+
+const SPEED = 200.0
+const JUMP_VELOCITY = -350.0
+const UP = -200.0 
+
+# Get the gravity from the project settings to be synced with RigidBody nodes.
+var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
+
+
+func _physics_process(delta):
+	# Add the gravity.
+
+
+	# Handle jump.
+	if Input.is_action_just_pressed(\"ui_accept\"):
+		velocity.y =  UP
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction = Input.get_axis(\"ui_left\", \"ui_right\")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	move_and_slide()
+"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pf6hh"]
 atlas = ExtResource("1_sr7yr")
@@ -44,11 +74,12 @@ radius = 14.0
 height = 114.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-position = Vector2(507, 279)
-script = ExtResource("1_877he")
+position = Vector2(458, 356)
+script = SubResource("GDScript_r6k45")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 5
 sprite_frames = SubResource("SpriteFrames_iges3")
 animation = &"new_animation"
 autoplay = "new_animation"
