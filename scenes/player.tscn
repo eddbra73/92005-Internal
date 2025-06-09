@@ -7,8 +7,8 @@ script/source = "extends CharacterBody2D
 
 
 const SPEED = 200.0
-const JUMP_VELOCITY = -350.0
-const UP = -200.0 
+const JUMP_VELOCITY = -400.0
+const UP = -250.0 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
@@ -74,7 +74,7 @@ radius = 14.0
 height = 114.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-position = Vector2(458, 356)
+position = Vector2(462, 352)
 script = SubResource("GDScript_r6k45")
 metadata/_edit_group_ = true
 
@@ -83,7 +83,8 @@ z_index = 5
 sprite_frames = SubResource("SpriteFrames_iges3")
 animation = &"new_animation"
 autoplay = "new_animation"
-frame_progress = 0.498031
+frame = 3
+frame_progress = 0.748029
 
 [node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
 zoom = Vector2(1.5, 1.5)
