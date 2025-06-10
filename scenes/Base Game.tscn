@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://7bko57qdhubu" path="res://sprites/AlienRock1 16x16.png" id="1_3bixt"]
 [ext_resource type="PackedScene" uid="uid://cn3d87q3272o2" path="res://scenes/player.tscn" id="2_gx0ac"]
-[ext_resource type="Script" path="res://Scripts/player_controls.gd" id="3_hvi8v"]
+[ext_resource type="Script" path="res://Scripts/player_movement.gd" id="3_rrpyh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8dk15"]
 texture = ExtResource("1_3bixt")
@@ -517,4 +517,4 @@ layer_0/tile_data = PackedInt32Array(983087, 0, 0, 983088, 65536, 0, 983089, 131
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_gx0ac")]
 position = Vector2(230, 398)
-script = ExtResource("3_hvi8v")
+script = ExtResource("3_rrpyh")
