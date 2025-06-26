@@ -73,7 +73,7 @@ animations = [{
 radius = 14.0
 height = 114.0
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
 position = Vector2(462, 352)
 script = SubResource("GDScript_r6k45")
 metadata/_edit_group_ = true

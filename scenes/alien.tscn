@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://cl1bodadgg8g4"]
+
+[ext_resource type="Texture2D" uid="uid://dsylmem4aqppa" path="res://sprites/SHEET.PNG" id="1_h100l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u8rjw"]
+atlas = ExtResource("1_h100l")
+region = Rect2(0, 0, 210, 210)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3vbw7"]
+atlas = ExtResource("1_h100l")
+region = Rect2(210, 0, 210, 210)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_np108"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u8rjw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3vbw7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h100l"]
+radius = 74.0
+height = 158.0
+
+[node name="Alien" type="CharacterBody2D"]
+position = Vector2(267, 167)
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_np108")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_h100l")
