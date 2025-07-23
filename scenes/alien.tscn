@@ -29,7 +29,6 @@ radius = 74.0
 height = 158.0
 
 [node name="Alien" type="CharacterBody2D"]
-position = Vector2(267, 167)
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
