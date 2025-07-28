@@ -74,6 +74,7 @@ radius = 14.0
 height = 114.0
 
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 14
 script = SubResource("GDScript_r6k45")
 metadata/_edit_group_ = true
 
@@ -86,7 +87,6 @@ frame = 3
 frame_progress = 0.748029
 
 [node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
-zoom = Vector2(1.5, 1.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 3)
