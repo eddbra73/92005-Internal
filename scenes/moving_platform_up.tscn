@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc4ccyrh21d8b"]
+
+[ext_resource type="Texture2D" uid="uid://7bko57qdhubu" path="res://sprites/AlienRock1 16x16.png" id="1_yvlkf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_janmx"]
+size = Vector2(78, 42)
+
+[node name="Up_platform" type="AnimatableBody2D"]
+collision_layer = 3
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yvlkf")
+region_enabled = true
+region_rect = Rect2(0, 0, 80, 47)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_janmx")
