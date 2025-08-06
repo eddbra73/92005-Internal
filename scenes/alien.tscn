@@ -1,6 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cl1bodadgg8g4"]
+[gd_scene load_steps=12 format=3 uid="uid://cl1bodadgg8g4"]
 
 [ext_resource type="Texture2D" uid="uid://dsylmem4aqppa" path="res://sprites/SHEET.PNG" id="1_h100l"]
+[ext_resource type="Script" uid="uid://bhs86mxrcbpil" path="res://Scripts/alien_move.gd" id="1_u8rjw"]
+[ext_resource type="PackedScene" uid="uid://bkls77pvpfeyj" path="res://scenes/killzone.tscn" id="3_3vbw7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3vbw7"]
+radius = 52.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u8rjw"]
 atlas = ExtResource("1_h100l")
@@ -9,6 +14,18 @@ region = Rect2(0, 0, 210, 210)
 [sub_resource type="AtlasTexture" id="AtlasTexture_3vbw7"]
 atlas = ExtResource("1_h100l")
 region = Rect2(210, 0, 210, 210)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_np108"]
+atlas = ExtResource("1_h100l")
+region = Rect2(0, 206, 217, 206)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxp04"]
+atlas = ExtResource("1_h100l")
+region = Rect2(217, 206, 217, 206)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kufd8"]
+atlas = ExtResource("1_h100l")
+region = Rect2(434, 206, 217, 206)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_np108"]
 animations = [{
@@ -22,21 +39,44 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_np108")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxp04")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kufd8")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 7.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h100l"]
-radius = 74.0
-height = 158.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_np108"]
+radius = 53.0
+height = 160.0
 
 [node name="Alien" type="CharacterBody2D"]
 collision_layer = 4
 collision_mask = 3
+script = ExtResource("1_u8rjw")
 metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, 0)
+shape = SubResource("CircleShape2D_3vbw7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_np108")
-animation = &"idle"
+animation = &"walk"
 autoplay = "idle"
+frame_progress = 0.819365
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_h100l")
+[node name="Killzone" parent="." instance=ExtResource("3_3vbw7")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(-5, 0)
+shape = SubResource("CapsuleShape2D_np108")
