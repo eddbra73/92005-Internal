@@ -8,8 +8,10 @@ point_count = 2
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 modulate = Color(0.7895, 0.312178, 0.179004, 1)
+emitting = false
 amount = 50
 lifetime = 0.5
+one_shot = true
 explosiveness = 1.0
 spread = 180.0
 gravity = Vector2(0, 0)

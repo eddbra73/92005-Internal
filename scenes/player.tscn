@@ -31,6 +31,10 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
 "
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_terir"]
@@ -78,7 +82,7 @@ collision_mask = 14
 script = SubResource("GDScript_r6k45")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="DeadlyDetector2" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 3)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_terir")
@@ -92,3 +96,14 @@ frame = 3
 frame_progress = 0.748029
 
 [node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 2
+
+[node name="DeadlyDetector" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2, 3)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_terir")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
