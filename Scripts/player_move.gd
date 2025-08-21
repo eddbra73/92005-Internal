@@ -25,4 +25,4 @@ func _on_DeadlyDetector_body_entered(body):
 
 func respawn(): 
 	global_position = respawn_position
-	velocity = Vector2.ZERO
+	velocity = Vector2.ZERO 
