@@ -8,21 +8,7 @@ func get_input():
 	velocity = input_direction * speed    #calculating velocity with the right direction and speed
 
 
+
 func _physics_process(delta):
 	get_input()       
 	move_and_slide() 
-
-@export var respawn_position: Vector2
-
-func _ready():
-	respawn_position = global_position
-  
-
-func _on_DeadlyDetector_body_entered(body): 
-	if body == self:
-		respawn() 
-
-
-func respawn(): 
-	global_position = respawn_position
-	velocity = Vector2.ZERO 
