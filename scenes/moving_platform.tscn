@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://7bko57qdhubu" path="res://sprites/AlienRock1 16x16.png" id="1_ms375"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1tdcd"]
-size = Vector2(77, 40)
+size = Vector2(77, 40.2453)
 
 [node name="Moving Platform" type="AnimatableBody2D"]
 scale = Vector2(2.65, 2.65)
@@ -15,5 +15,5 @@ region_enabled = true
 region_rect = Rect2(0, 0, 81, 47)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -1)
+position = Vector2(-0.5, -0.877359)
 shape = SubResource("RectangleShape2D_1tdcd")
