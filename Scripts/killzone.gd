@@ -2,8 +2,11 @@ extends Area2D
 
 @onready var timer: Timer = $Timer
 
+
+
 func _on_body_entered(body):    #when body/character enters the area/killzone
-	print("You died!") 
+	print("You died!")  
+	$Explosion/CPUParticles2D.emitting = true      #makes the particles emit one time
 	timer.start()     #starts time that stops it from instantly respawning, looks better
 
 

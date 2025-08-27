@@ -1,10 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://bupstsea4htto"]
 
 [ext_resource type="Script" uid="uid://csy43hp5lv30p" path="res://Scripts/buttons.gd" id="1_upctu"]
-[ext_resource type="Texture2D" uid="uid://dcwn0o7q6lc7t" path="res://sprites/moon_sky.png" id="1_xdvgc"]
+[ext_resource type="Texture2D" uid="uid://camtro25hcq7m" path="res://sprites/game for background.png" id="2_upctu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_upctu"]
-texture = ExtResource("1_xdvgc")
+texture = ExtResource("2_upctu")
 modulate_color = Color(0.687215, 0.687215, 0.687215, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lumdm"]
