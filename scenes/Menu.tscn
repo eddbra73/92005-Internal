@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bupstsea4htto"]
+[gd_scene load_steps=8 format=3 uid="uid://bupstsea4htto"]
 
 [ext_resource type="Script" uid="uid://csy43hp5lv30p" path="res://Scripts/buttons.gd" id="1_upctu"]
 [ext_resource type="Texture2D" uid="uid://camtro25hcq7m" path="res://sprites/game for background.png" id="2_upctu"]
@@ -7,8 +7,28 @@
 texture = ExtResource("2_upctu")
 modulate_color = Color(0.687215, 0.687215, 0.687215, 1)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_upctu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_upctu"]
+bg_color = Color(0.779291, 0.779292, 0.779291, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.00820202, 0.00820202, 0.00820202, 0.6)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_11y2r"]
+bg_color = Color(0.625596, 0.625598, 0.625596, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.00820202, 0.00820202, 0.00820202, 0.6)
+shadow_size = 5
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lumdm"]
-bg_color = Color(0.894922, 0.894922, 0.894922, 1)
+bg_color = Color(0.93408, 0.93408, 0.93408, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -52,24 +72,42 @@ metadata/_edit_group_ = true
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_upctu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_upctu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_11y2r")
 theme_override_styles/normal = SubResource("StyleBoxFlat_lumdm")
 text = "Play"
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_upctu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_upctu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_11y2r")
 theme_override_styles/normal = SubResource("StyleBoxFlat_lumdm")
 text = "Controls"
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_upctu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_upctu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_11y2r")
 theme_override_styles/normal = SubResource("StyleBoxFlat_lumdm")
 text = "Exit"
 

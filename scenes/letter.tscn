@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1rkxp2y3bsku"]
+
+[ext_resource type="Texture2D" uid="uid://efvxxyihn4av" path="res://sprites/pixel-art-envelope-game-asset-design-free-vector-removebg-preview.png" id="1_kg060"]
+[ext_resource type="Script" uid="uid://h4is8yyjs1p2" path="res://Scripts/letter.gd" id="1_s3w0n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3w0n"]
+size = Vector2(212, 164)
+
+[node name="Letter" type="Area2D"]
+script = ExtResource("1_s3w0n")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kg060")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_s3w0n")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

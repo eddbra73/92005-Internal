@@ -1,0 +1,94 @@
+[gd_scene load_steps=14 format=3 uid="uid://bqd0snwc2q3eu"]
+
+[ext_resource type="Texture2D" uid="uid://bq2hid6egv6jj" path="res://sprites/earthspin-sheet.png" id="1_afhwv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2umt7"]
+atlas = ExtResource("1_afhwv")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2tfwh"]
+atlas = ExtResource("1_afhwv")
+region = Rect2(432, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5w1d"]
+atlas = ExtResource("1_afhwv")
+region = Rect2(432, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3t2fh"]
+atlas = ExtResource("1_afhwv")
+region = Rect2(432, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78p35"]
+atlas = ExtResource("1_afhwv")
+region = Rect2(432, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhjmp"]
+atlas = ExtResource("1_afhwv")
+region = Rect2(432, 192, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8otvb"]
+atlas = ExtResource("1_afhwv")
+region = Rect2(432, 240, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_videg"]
+atlas = ExtResource("1_afhwv")
+region = Rect2(432, 288, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_te4mb"]
+atlas = ExtResource("1_afhwv")
+region = Rect2(432, 336, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drirb"]
+atlas = ExtResource("1_afhwv")
+region = Rect2(432, 384, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_np46n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2umt7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2tfwh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k5w1d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3t2fh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78p35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhjmp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8otvb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_videg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_te4mb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drirb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nj2me"]
+radius = 23.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_np46n")
+frame = 5
+frame_progress = 0.905431
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_nj2me")

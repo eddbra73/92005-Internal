@@ -1,24 +1,14 @@
 extends Control
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
 func _on_play_pressed():
-	get_tree().change_scene_to_file("res://scenes/Base Game.tscn")  
-
+	get_tree().change_scene_to_file("res://scenes/Base Game.tscn") 
+#changes to main game scene when clicked
 
 func _on_controls_pressed():
 	print("Controls")
 
 
 
-func _on_exit_pressed():
+func _on_exit_pressed():       #closes/quits the game when clicked
 	get_tree().quit()
