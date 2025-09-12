@@ -643,3 +643,20 @@ text = "Deliver this letter back to Earth at the end of this strange planet to w
 [node name="earth" parent="." instance=ExtResource("15_6kwfc")]
 position = Vector2(7195, 398)
 scale = Vector2(12.5, 12.5)
+
+[node name="Alien6" parent="." instance=ExtResource("4_3su3w")]
+position = Vector2(4126, 254)
+scale = Vector2(0.7, 0.7)
+
+[node name="Alien7" parent="." instance=ExtResource("4_3su3w")]
+position = Vector2(5038, 684)
+
+[node name="Alien8" parent="." instance=ExtResource("4_3su3w")]
+position = Vector2(5913, 232)
+
+[node name="Alien9" parent="." instance=ExtResource("4_3su3w")]
+position = Vector2(6451, 588)
+
+[node name="Alien10" parent="." instance=ExtResource("4_3su3w")]
+position = Vector2(4187, 738)
+scale = Vector2(0.6, 0.6)
