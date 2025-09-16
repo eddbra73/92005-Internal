@@ -7,10 +7,8 @@
 texture = ExtResource("2_upctu")
 modulate_color = Color(0.687215, 0.687215, 0.687215, 1)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_upctu"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_upctu"]
-bg_color = Color(0.779291, 0.779292, 0.779291, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lumdm"]
+bg_color = Color(0.93408, 0.93408, 0.93408, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -27,14 +25,16 @@ corner_radius_bottom_left = 16
 shadow_color = Color(0.00820202, 0.00820202, 0.00820202, 0.6)
 shadow_size = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lumdm"]
-bg_color = Color(0.93408, 0.93408, 0.93408, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_upctu"]
+bg_color = Color(0.779291, 0.779292, 0.779291, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 shadow_color = Color(0.00820202, 0.00820202, 0.00820202, 0.6)
 shadow_size = 5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_upctu"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -61,10 +61,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -188.0
-offset_top = -86.0
-offset_right = 188.0
-offset_bottom = 184.0
+offset_left = -185.5
+offset_top = -94.5
+offset_right = 185.5
+offset_bottom = 94.5
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_group_ = true
@@ -72,43 +72,29 @@ metadata/_edit_group_ = true
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-theme_override_styles/focus = SubResource("StyleBoxEmpty_upctu")
-theme_override_styles/hover = SubResource("StyleBoxFlat_upctu")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_11y2r")
 theme_override_styles/normal = SubResource("StyleBoxFlat_lumdm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_11y2r")
+theme_override_styles/hover = SubResource("StyleBoxFlat_upctu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_upctu")
 text = "Play"
-
-[node name="Button2" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-theme_override_styles/focus = SubResource("StyleBoxEmpty_upctu")
-theme_override_styles/hover = SubResource("StyleBoxFlat_upctu")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_11y2r")
-theme_override_styles/normal = SubResource("StyleBoxFlat_lumdm")
-text = "Controls"
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-theme_override_styles/focus = SubResource("StyleBoxEmpty_upctu")
-theme_override_styles/hover = SubResource("StyleBoxFlat_upctu")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_11y2r")
 theme_override_styles/normal = SubResource("StyleBoxFlat_lumdm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_11y2r")
+theme_override_styles/hover = SubResource("StyleBoxFlat_upctu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_upctu")
 text = "Exit"
 
 [node name="Label" type="Label" parent="."]
@@ -121,5 +107,4 @@ theme_override_font_sizes/font_size = 60
 text = "Getting Home"
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]
